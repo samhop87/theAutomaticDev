@@ -61,6 +61,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           script: |
             cd /var/www/theautomatic.dev
+            sudo chown -R www-data:www-data /var/www/theautomatic.dev
             php artisan down
             sudo git fetch origin master
             sudo git reset --hard origin/master
