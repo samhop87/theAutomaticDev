@@ -1,7 +1,7 @@
 <template>
     <div>
         <a :href="button_link" target="_blank">
-            <img class="w-20 cursor-pointer hover rounded-xl"
+            <img class="w-20 cursor-pointer dark:text-white dark:fill-white hover rounded-xl"
                  :class="transBlock ? 'rotated position' : ''"
                  :src="image_src"
                  alt="github">
