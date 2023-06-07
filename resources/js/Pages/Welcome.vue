@@ -31,8 +31,8 @@ defineProps({
             <linked-in-button/>
         </div>
         <div ref="cog" class="relative my-16">
-            <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                 width="500px" height="500px" viewBox="0 0 34.5 34.5" xml:space="preserve">
+            <svg class="fill-black dark:fill-white w-[300px] h-[300px] sm:w-[500px] sm:h-[500px]" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 0 34.5 34.5" xml:space="preserve">
 <g>
 	<path d="M34.5,20.375v-6.25h-4.514c-0.32-1.313-0.838-2.545-1.521-3.669l3.193-3.193l-4.42-4.419l-3.193,3.193
 		c-1.125-0.683-2.355-1.2-3.67-1.521V0.001h-6.25v4.515c-1.313,0.321-2.546,0.838-3.671,1.521L7.262,2.844L2.843,7.263l3.193,3.193
@@ -43,7 +43,7 @@ defineProps({
 </g>
 </svg>
             <div ref=cogcenter class="absolute rounded-full hidden">
-                <p class="text-white leading-[4.75rem] font-display text-headline">The Automatic Dev</p>
+                <p class="text-white leading-[4.75rem] font-display text-xl sm:text-headline">The Automatic Dev</p>
             </div>
         </div>
         <div ref="lowerButtons" class="flex flex-row justify-around w-1/4 hidden">
