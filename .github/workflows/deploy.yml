@@ -70,8 +70,23 @@ jobs:
             sudo chmod -R ug+rwx storage bootstrap/cache
             composer install --no-interaction --prefer-dist --optimize-autoloader
             composer update
-            npm install
-            npm run build
             php artisan migrate --force
             php artisan optimize
             php artisan up
+
+  build:
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          check-latest: true
+      - name: Install NPM dependencies
+        run: npm install
+      - name: Compile assets for production
+        run: npm run build
