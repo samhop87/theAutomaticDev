@@ -42,8 +42,8 @@ defineProps({
 		S20.701,23.5,17.25,23.5z"/>
 </g>
 </svg>
-            <div ref=cogcenter class="absolute rounded-full hidden dark:bg-white bg-black">
-                <p class="dark:text-black text-white leading-[4.75rem] font-display text-xl sm:text-headline">The Automatic Dev</p>
+            <div ref=cogcenter class="absolute rounded-full hidden dark:bg-white bg-black top-[4.75rem] sm:top-[8.75rem] left-[4.3rem] sm:left-[6.65rem]">
+                <p class="dark:text-black text-white leading-[3.2rem] sm:leading-[4.75rem] font-display text-[3.5rem] sm:text-headline">The Automatic Dev</p>
             </div>
         </div>
         <div ref="lowerButtons" class="flex flex-row justify-around w-1/4 hidden dark:bg-white">
@@ -106,7 +106,5 @@ defineProps({
     width: 50%;
     height: 50%;
     background-size: 200% 200%;
-    top: 8.75rem;
-    left: 6.65rem;
 }
 </style>
