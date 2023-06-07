@@ -61,12 +61,14 @@ jobs:
           username: ${{ secrets.USERNAME }}
           script: |
             cd /var/www/theautomatic.dev
-            sudo chown -R www-data:www-data /var/www/theautomatic.dev
+            sudo chown -R 755 www-data:www-data /var/www/theautomatic.dev
+            sudo chown -R 755 www-data:www-data /var/www/theautomatic.dev/storage
+            sudo chown -R 755 www-data:www-data /var/www/theautomatic.dev/composer.lock
+            sudo chgrp -R 755 www-data storage bootstrap/cache
+            sudo chmod -R ug+rwx storage bootstrap/cache
             php artisan down
             sudo git fetch origin master
             sudo git reset --hard origin/master
-            sudo chgrp -R www-data storage bootstrap/cache
-            sudo chmod -R ug+rwx storage bootstrap/cache
             composer install --no-interaction --prefer-dist --optimize-autoloader
             composer update
             npm install
