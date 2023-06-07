@@ -27,7 +27,7 @@ defineProps({
     <div
         class="relative flex flex-col md:flex-row justify-center items-center min-h-screen bg-dots-darker bg-center bg-gray-200 dark:bg-dots-lighter dark:bg-gray-900 selection:text-white"
     >
-        <div ref="upperButtons" class="flex flex-row justify-around w-1/4 hidden dark:bg-white">
+        <div ref="upperButtons" class="flex flex-row justify-around w-1/4 hidden">
             <linked-in-button/>
         </div>
         <div ref="cog" class="relative my-16">
@@ -46,7 +46,7 @@ defineProps({
                 <p class="dark:text-black text-white leading-[3.2rem] sm:leading-[4.75rem] font-display text-[3.5rem] sm:text-headline">The Automatic Dev</p>
             </div>
         </div>
-        <div ref="lowerButtons" class="flex flex-row justify-around w-1/4 hidden dark:bg-white">
+        <div ref="lowerButtons" class="flex flex-row justify-around w-1/4 hidden">
             <github-button/>
         </div>
     </div>
